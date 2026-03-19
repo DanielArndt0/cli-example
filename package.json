@@ -1,0 +1,47 @@
+{
+  "name": "@danielarndt0/cli-example",
+  "version": "1.0.0",
+  "description": "Example repository for building and publishing a reusable TypeScript CLI to GitHub Packages.",
+  "author": "Daniel Arndt",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "cli-example": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "cli": "tsx src/cli.ts",
+    "test": "npm run test:unit",
+    "test:unit": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint .",
+    "format": "prettier . --write",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "@types/node": "^24.0.0",
+    "eslint": "^9.20.1",
+    "prettier": "^3.5.0",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.8.0",
+    "typescript-eslint": "^8.24.0",
+    "vitest": "^3.0.0"
+  }
+}
