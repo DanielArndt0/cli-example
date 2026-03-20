@@ -31,7 +31,6 @@ cli-example random pick apple banana orange
 
 ```bash
 npm install
-npm run build
 npm run cli -- --help
 npm run cli -- system info
 npm run cli -- math average 5 10 15
